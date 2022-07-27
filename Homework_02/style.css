@@ -104,3 +104,10 @@ nav ul li a:hover {
 .social a:hover {
   color: #ff4321;
 }
+
+#about {
+  background-color: #fffbe9;
+  margin-left: 100px;
+
+  margin-top: 678px;
+}
