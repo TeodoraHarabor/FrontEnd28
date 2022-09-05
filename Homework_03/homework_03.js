@@ -16,7 +16,31 @@ function oddNumbers() {
 }
 oddNumbers();
 
-/*task 2*/
+/*task 2a*/
+function sum() {
+  var arr = [2, 3, 5, 7, 5, 3];
+  var total = 0;
+  for (var i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  console.log(total);
+}
+sum();
+
+/*task 2b*/
+function maximum() {
+  let arr = [2, 3, 5, 7, 5, 3];
+  let max = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (max < arr[i]) {
+      max = arr[i];
+    }
+  }
+  console.log(max);
+}
+maximum();
+
+/*task 4*/
 // for (i = 1; i <= 20; i++) {
 //   if (i % 3 == 0) {
 //     console.log("Fizz");
