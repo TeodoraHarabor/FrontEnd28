@@ -40,6 +40,21 @@ function maximum() {
 }
 maximum();
 
+/*task 2c*/
+function elementAppears() {
+  const arr = [2, 3, 5, 7, 5, 3];
+  let count = 0;
+
+  for (const element of arr) {
+    if (element === 5) {
+      count += 1;
+    }
+  }
+
+  console.log(count);
+}
+elementAppears();
+
 /*task 4*/
 // for (i = 1; i <= 20; i++) {
 //   if (i % 3 == 0) {
