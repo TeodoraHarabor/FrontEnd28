@@ -55,16 +55,33 @@ function elementAppears() {
 }
 elementAppears();
 
+/*task3*/
+function fib() {
+  var n1 = 0,
+    n2 = 1,
+    nextTerm;
+  for (let i = 1; i <= 50; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+  }
+}
+fib();
+
 /*task 4*/
-// for (i = 1; i <= 20; i++) {
-//   if (i % 3 == 0) {
-//     console.log("Fizz");
-//   }
-//   if (i % 5 == 0) {
-//     console.log("Buzz");
-//   } else if (i % 5 == 0 && i % 3 == 0) {
-//     console.log("fizzBuzz");
-//   } else {
-//     console.log(i);
-//   }
-// }
+function alert() {
+  for (i = 1; i <= 100; i++) {
+    if (i % 3 == 0) {
+      console.log("Fizz");
+    }
+    if (i % 5 == 0) {
+      console.log("Buzz");
+    } else if (i % 5 == 0 && i % 3 == 0) {
+      console.log("fizzBuzz");
+    } else {
+      console.log(i);
+    }
+  }
+}
+alert();
