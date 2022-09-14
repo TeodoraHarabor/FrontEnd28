@@ -1,0 +1,19 @@
+.box {
+  width: 200px;
+  height: 300px;
+  border: 5px solid rgb(43, 43, 213);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box img {
+  height: 150px;
+  width: 150px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <p id="ok"></p>
+
     <div class="container">
       <h2>CONTACT US</h2>
 
@@ -29,19 +31,27 @@
             name="lastname"
             placeholder="Your last name.."
           />
-          <label for="country">Gender:</label> <br />
-          <input id="radio1" type="radio" name="gender" value="male" required />
-          Male <br />
-          <input
-            id="radio2"
-            type="radio"
-            name="gender"
-            value="female"
-            required
-          />
-          Female
-          <br />
-
+          <div class="gender">
+            <label>Gender:</label> <br />
+            <input
+              id="radio1"
+              type="radio"
+              name="gender"
+              value="male"
+              required
+            />
+            Male <br />
+            <input
+              id="radio2"
+              type="radio"
+              name="gender"
+              value="female"
+              required
+            />
+            Female
+            <br />
+            <br />
+          </div>
           <label for="subject">Subject:</label>
           <textarea
             required
