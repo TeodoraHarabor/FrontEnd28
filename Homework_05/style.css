@@ -39,3 +39,19 @@ p {
 #message {
   color: red;
 }
+
+#btnAdd,
+#btnClear,
+#sortAsc,
+#sortDesc {
+  font-size: 15px;
+  background-color: #505518;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#items {
+  cursor: pointer;
+}
