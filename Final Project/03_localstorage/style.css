@@ -1,0 +1,85 @@
+.card {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 310px;
+  transition: opacity 0.4s ease;
+  box-shadow: 0px 4px 4px 0px rgb(149, 148, 150);
+  margin-bottom: 40px;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  flex: 5;
+}
+
+.container {
+  display: flex;
+}
+
+.side {
+  flex: 1;
+}
+
+/*DETAILS*/
+
+.details img {
+  float: left;
+  margin-left: 60px;
+  margin-top: 50px;
+  width: 300px;
+  height: 300px;
+}
+
+.description {
+  margin-left: 20px;
+  margin-right: 50px;
+  line-height: 1.6;
+  margin-top: 170px;
+}
+.dts {
+  margin-left: 390px;
+  margin-top: 80px;
+}
+
+.btn-details {
+  height: 10px;
+  width: 30px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #e59c9c;
+  text-decoration: none;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 12px 30px;
+  font-size: 14px;
+  transition: 0.4s;
+}
+
+.btn-details:hover {
+  background-color: #5e583b;
+  color: white;
+}
+
+/*INTRO*/
+.intro {
+  /* width: 200px;
+  height: 200px; */
+  text-align: center;
+}
