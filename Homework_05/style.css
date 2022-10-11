@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Sofia", sans-serif;
+}
+
+.container {
+  position: relative;
+}
+.box {
+  position: absolute;
+  height: 600px;
+  width: 500px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 15px;
+  background-color: white;
+  border: 6px solid #505518;
+  border-radius: 4px;
+}
+
+p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.additem {
+  font-size: 14px;
+}
+
+#items {
+  margin-left: 200px;
+  text-align: start;
+}
+
+#message {
+  color: red;
+}
+
+#btnAdd,
+#btnClear,
+#sortAsc,
+#sortDesc {
+  font-size: 15px;
+  background-color: #505518;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#items {
+  cursor: pointer;
+}

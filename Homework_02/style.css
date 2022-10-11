@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+nav {
+  width: 84%;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 150px;
+  cursor: pointer;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff4321;
+  padding: 10px 18px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  color: #ff4321;
+}
+
+.btn {
+  background: #ff4321;
+  border-radius: 5px;
+  padding: 10px 18px;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  border: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #ff4321;
+  border: 1px solid #ff4321;
+}
+
+.info {
+  margin-left: 8%;
+  margin-top: 10%;
+}
+
+.info h1 {
+  font-size: 40px;
+  color: #444242;
+}
+
+.info h1 span {
+  color: #ff4321;
+}
+
+.info p {
+  color: #606163;
+  line-height: 22px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 1px;
+}
+
+.img-box {
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+
+.img-box img {
+  height: 100%;
+  position: absolute;
+  background-color: transparent;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: bottom 1s, left 1s;
+}
+
+.img-box:hover .back-img {
+  bottom: 40px;
+}
+
+.img-box:hover .man-img {
+  left: 54%;
+}
+
+.social {
+  margin-left: 8%;
+  margin-top: 50px;
+}
+
+.social a {
+  font-size: 28px;
+  color: transparent;
+  margin-right: 2px;
+}
+
+.social a:hover {
+  color: #ff4321;
+}
+
+#about {
+  font-weight: bold;
+  margin-top: 720px;
+  margin-left: 100px;
+}
+
+.infoabout {
+  margin-left: 140px;
+}
+
+.hobbies {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+#hobbies p {
+  text-align: center;
+  margin-left: 120px;
+  margin-top: 54px;
+}
+
+#hobbies img {
+  height: 300px;
+  width: 300px;
+  margin-top: 70px;
+  margin-left: 240px;
+}
+
+#projects {
+  margin-left: 120px;
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+.infoprojects {
+  display: flex;
+  position: absolute;
+  margin-left: 710px;
+  color: #ff4321;
+  font-weight: bold;
+  font-size: 30px;
+  justify-content: center;
+}
+
+.projects-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 720px;
+  width: 980px;
+  border-radius: 5px;
+}
+
+#contact {
+  font-weight: bold;
+  margin-left: 120px;
+  margin-top: 100px;
+}
+
+.container {
+  height: 40vw;
+  width: 40vw;
+  margin: 200px auto;
+  display: flex;
+}
+
+.contact-info {
+  flex: 1;
+  height: 100%;
+  background: linear-gradient(#f7d6d6, #ff4321);
+}
+
+.contact-info {
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info .title {
+  margin: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.contact.info .contact-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  gap: 20px;
+}
+
+.detail-item {
+  font-size: 19px;
+}
+
+.detail-item h6 {
+  font-size: 18px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-us h2 {
+  text-align: center;
+}
+
+.contact-us {
+  flex: 2;
+  height: 98%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background-color: #eee;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 92%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-left: 10px;
+  margin-bottom: 16px;
+  gap: 20px;
+}
+
+label {
+  margin-left: 10px;
+}
+
+input[type="submit"] {
+  background-color: #ff4321;
+  color: white;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px;
+}
+
+input[type="submit"]:hover {
+  background-color: #f9b3ac;
+}
+
+/* laptop */
+@media (min-width: 801px) and (max-width: 1200px) {
+  nav {
+    margin-left: 125px;
+  }
+
+  .info {
+    margin-left: 130px;
+  }
+
+  .img-box {
+    height: 65%;
+    right: 20px;
+  }
+
+  .social {
+    margin-left: 80px;
+  }
+  #about {
+    margin-top: 427px;
+    margin-left: 139px;
+  }
+
+  #projects {
+    margin-left: 139px;
+  }
+  .infoprojects {
+    margin-left: 170px;
+    font-size: 27px;
+  }
+
+  .projects-img {
+    margin-left: 131px;
+    height: 631px;
+    width: 717px;
+  }
+
+  .container {
+    height: 72vw;
+    width: 93vw;
+    margin-left: 115px;
+  }
+}
+
+/* tablet*/
+@media (min-width: 501px) and (max-width: 800px) {
+  nav {
+    margin-left: 40px;
+    width: 110%;
+  }
+
+  .img-box {
+    height: 67%;
+    right: -40px;
+    width: 45%;
+  }
+
+  .social {
+    margin-left: 80px;
+  }
+  #about {
+    margin-top: 440px;
+    margin-left: 78px;
+  }
+
+  .infoabout {
+    margin-left: 78px;
+  }
+
+  #projects {
+    margin-left: 78px;
+  }
+
+  .infoprojects {
+    margin-left: 78px;
+    font-size: 27px;
+  }
+
+  .projects-img {
+    margin-left: 72px;
+    height: 631px;
+    width: 838px;
+  }
+
+  .container {
+    height: 100vw;
+    width: 109vw;
+    margin-left: 81px;
+  }
+}
+
+/* smartphone*/
+@media (max-width: 500px) {
+  nav {
+    margin-left: 40px;
+    width: 172%;
+  }
+
+  .img-box {
+    height: 67%;
+    right: -203px;
+    width: 45%;
+  }
+
+  .social {
+    margin-left: 40px;
+  }
+
+  #about {
+    margin-top: 278px;
+    margin-left: 45px;
+  }
+
+  .infoabout {
+    margin-left: 45px;
+  }
+
+  #projects {
+    margin-left: 45px;
+  }
+
+  .infoprojects {
+    margin-left: 78px;
+    font-size: 27px;
+  }
+
+  .projects-img {
+    margin-left: 52px;
+    height: 618px;
+    width: 670px;
+  }
+  #contact {
+    margin-left: 45px;
+  }
+  .container {
+    height: 131vw;
+    width: 171vw;
+    margin-left: 65px;
+    margin-top: 20px;
+  }
+
+  .contact-us input {
+    width: 80%;
+  }
+  #submit {
+    width: 56px;
+    height: 40px;
+  }
+  .contact-us textarea {
+    width: 80%;
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p id="ok"></p>
+
+    <div class="container">
+      <h2>CONTACT US</h2>
+
+      <div class="left">
+        <form onsubmit="return false">
+          <label for="fname">First Name:</label>
+          <input
+            required
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+          />
+          <label for="lname">Last Name:</label>
+          <input
+            required
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name.."
+          />
+          <div class="gender">
+            <label>Gender:</label> <br />
+            <input
+              id="radio1"
+              type="radio"
+              name="gender"
+              value="male"
+              required
+            />
+            Male <br />
+            <input
+              id="radio2"
+              type="radio"
+              name="gender"
+              value="female"
+              required
+            />
+            Female
+            <br />
+            <br />
+          </div>
+          <label for="subject">Subject:</label>
+          <textarea
+            required
+            id="subject"
+            name="subject"
+            placeholder="Your message here.."
+            style="height: 170px"
+          ></textarea>
+          <input id="submit" type="submit" value="Submit" />
+        </form>
+      </div>
+
+      <div class="right">
+        <img
+          src="https://images.pexels.com/photos/158063/bellingrath-gardens-alabama-landscape-scenic-158063.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          alt=""
+        />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

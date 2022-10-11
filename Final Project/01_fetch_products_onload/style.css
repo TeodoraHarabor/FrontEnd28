@@ -1,0 +1,35 @@
+.card {
+  /* border: 1px solid rgb(112, 7, 161); */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  transition: opacity 0.4s ease;
+  box-shadow: 0px 4px 4px 0px rgb(149, 148, 150);
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  flex: 5;
+}
+
+.container {
+  display: flex;
+}
+
+.side {
+  flex: 1;
+}
