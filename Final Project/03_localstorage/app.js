@@ -5,7 +5,7 @@ const createCardFromProduct = (product) => {
       <p>${product.brand}</p>
       <p>${product.price} Lei</p>
       <a href="details.html?product_id=${product.id}"class="btn-details">DETAILS</a>
-      <button id=${product.id} class="btn-right">Add to cart</button>
+      <button id=${product.id} class="btn-right add-to-cart">Add to cart</button>
    </div>`;
 };
 
@@ -124,16 +124,19 @@ document
   .addEventListener("click", filterByPrice);
 
 const addProductToCart = async (id) => {
-  const result = await fetch(
-    `https://6325aac670c3fa390f8c6c4d.mockapi.io/products/${id}`
-  );
-  const product = await result.json();
-  localStorage.setItem();
+  let products = JSON.parse(localStorage.getItem("products"));
+  if (products == null) products = [];
+  console.log(products);
+  products.push(id);
+
+  localStorage.setItem("products", JSON.stringify(products));
 };
 
 const handleActions = (event) => {
-  const productId = event.target.id;
-  addProductToCart(productId);
+  if (event.target.classList.contains("add-to-cart")) {
+    const productId = event.target.id;
+    addProductToCart(productId);
+  }
 };
 
 document
