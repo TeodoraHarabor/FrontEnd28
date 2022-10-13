@@ -5,7 +5,7 @@ const createCardFromProduct = (product) => {
       <p>${product.brand}</p>
       <p>${product.price} Lei</p>
       <a href="details.html?product_id=${product.id}"class="btn-details">DETAILS</a>
-      <button id=${product.id} class="btn-right add-to-cart">Add to cart</button>
+      <button id=${product.id} class="add-to-cart">Add to cart <i class="fa-solid fa-cart-shopping"></i></button>
    </div>`;
 };
 
@@ -44,7 +44,7 @@ const createInnerHTMLforPriceFilter = (minPrice, maxPrice) => {
         `
       <div>
          <label>${interval.start} - ${interval.end}</label>
-         <input type="checkbox" >
+         <input class="price-checkbox" type="checkbox" >
       </div>
    `
     )

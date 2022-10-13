@@ -8,9 +8,9 @@ const loadProducts = () => {
         <img src='${product.imgURL}' />
         <h3>${product.name}</h3>
         <p>${product.brand}</p>
-        <p>${product.price} Lei</p>
+        <p>${product.price} </p>
         <a href="details.html?product_id=${product.id}"class="btn-details">DETAILS</a>
-        <button id=${product.id} class="btn-right add-to-cart">Add to cart</button>
+        <button id=${product.id} class="add-to-cart">Add to cart</button>
      </div>`;
   };
 

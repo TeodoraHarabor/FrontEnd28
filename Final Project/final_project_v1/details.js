@@ -14,9 +14,9 @@ const showProductDetails = async () => {
         <div class="details">
            <img src='${productInfo.imgURL}'/> </br>
            <div class="dts">
-           <h3 >${productInfo.name}</h3>
-               <p >${productInfo.brand}</p>
-               <p >${productInfo.price} Lei</p>
+           <h3>${productInfo.name}</h3>
+               <p>${productInfo.brand}</p>
+               <p>${productInfo.price} Lei</p>
           </div>
           <p class='description'></br> Description:</br> ${productInfo.description}</p>
         </div>
