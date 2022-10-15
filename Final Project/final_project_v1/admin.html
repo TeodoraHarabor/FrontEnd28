@@ -5,8 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
   </head>
   <body>
-    <h3>Admin</h3>
+    <div id="app">
+      <div class="navbar">
+        <div class="logo">
+          <a class="btn btn-lg" href="index.html">TALCIOC</a>
+        </div>
+        <div class="menu">
+          <a class="btn btn-admin" href="admin.html"
+            >Admin <i class="fa-solid fa-user"></i
+          ></a>
+          <a class="btn btn-cart" href="cart.html">
+            Cart <i class="fa-solid fa-cart-shopping"></i
+          ></a>
+        </div>
+      </div>
+      <div class="container">Home page</div>
+
+      <div class="admin-container">
+        <div class="header">
+          <h2>Gestionare produse</h2>
+          <button class="btn btn-primary">+ Adauga produs nou</button>
+        </div>
+    </div>
+    <script type="module" src="admin.js"></script>
   </body>
 </html>
