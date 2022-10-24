@@ -80,8 +80,8 @@ body {
   height: 10px;
   width: 40px;
   margin-left: 10px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: auto;
   display: flex;
   justify-content: center;
   background-color: #e59c9c;
@@ -148,17 +148,59 @@ body {
 }
 
 /*admin page*/
-.admin-container .header {
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
+}
+
+.add-product-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 15px;
   margin-top: 40px;
-  border: 2px solid gray;
+  border: 2px solid lightblue;
   border-radius: 5px;
   padding: 20px;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 60px;
+.admin-container .header,
+.admin-container .add-product-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-product-form .item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-product-form .item .label-item {
+  flex: 1;
+}
+
+.add-product-form .item .input-item {
+  flex: 2;
+}
+
+.add-product-form .item .input-item input {
+  width: 100%;
+}
+.hidden {
+  display: none;
+}
+
+.error {
+  background-color: red;
+}
+
+.success {
+  background-color: green;
 }

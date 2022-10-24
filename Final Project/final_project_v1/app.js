@@ -142,3 +142,12 @@ const handleActions = (event) => {
 document
   .querySelector(".products-container")
   .addEventListener("click", handleActions);
+
+import { getAllProducts } from "./products.js";
+
+window.addEventListener("DOMContentLoaded", async () => {
+  const products = await getAllProducts();
+  const productsCards = products.map((product) => createProductCard(product));
+
+  document.querySelector(".container").innerHTML = productsCards.join("");
+});
