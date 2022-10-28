@@ -1,3 +1,12 @@
+let prodResult;
+let productId;
+document.querySelector(".container").addEventListener("click", (e) => {
+  if (e.target.classList.contains("add-to-cart")) {
+    productId = e.target.id;
+    addProductToCart();
+  }
+});
+
 const createCardFromProduct = (product) => {
   return `<div class='card'>
       <img src='${product.imgURL}' />
@@ -59,6 +68,7 @@ const getProductsOnIndexPage = () => {
   fetch("https://6325aac670c3fa390f8c6c4d.mockapi.io/products")
     .then((result) => result.json())
     .then((products) => {
+      prodResult = products;
       const productCards = products.map((product) =>
         createCardFromProduct(product)
       );
@@ -123,31 +133,28 @@ document
   .getElementById("price-filter")
   .addEventListener("click", filterByPrice);
 
-const addProductToCart = async (id) => {
-  let products = JSON.parse(localStorage.getItem("products"));
-  if (products == null) products = [];
-  console.log(products);
-  products.push(id);
-
-  localStorage.setItem("products", JSON.stringify(products));
-};
-
-const handleActions = (event) => {
-  if (event.target.classList.contains("add-to-cart")) {
-    const productId = event.target.id;
-    addProductToCart(productId);
+const addProductToCart = () => {
+  let myProduct = prodResult.find((product) => product.id == productId);
+  console.log(myProduct);
+  let cart = [];
+  if (localStorage.getItem("cart") === null) {
+    cart.push({ ...myProduct, items: 1 });
+  } else {
+    cart = JSON.parse(localStorage.getItem("cart"));
+    const productInCart = cart.find((product) => product.id == productId);
+    if (productInCart != undefined) {
+      productInCart.items += 1;
+    } else {
+      const productToBeAddedInCart = { ...myProduct, items: 1 };
+      cart.push(productToBeAddedInCart);
+    }
+  }
+  if (cart.length > 0) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    // Confirmation message
+    document.querySelector(".confirm").style.display = "block";
+    setTimeout(() => {
+      document.querySelector(".confirm").style.display = "none";
+    }, 1000);
   }
 };
-
-document
-  .querySelector(".products-container")
-  .addEventListener("click", handleActions);
-
-import { getAllProducts } from "./products.js";
-
-window.addEventListener("DOMContentLoaded", async () => {
-  const products = await getAllProducts();
-  const productsCards = products.map((product) => createProductCard(product));
-
-  document.querySelector(".container").innerHTML = productsCards.join("");
-});

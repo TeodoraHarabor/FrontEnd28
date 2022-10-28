@@ -7,7 +7,9 @@
 body {
   font-family: "Raleway", sans-serif;
 }
-
+.btn-lg {
+  text-decoration: none;
+}
 .card {
   border-radius: 5px;
   display: flex;
@@ -203,4 +205,34 @@ body {
 
 .success {
   background-color: green;
+}
+
+/*cart*/
+.cartImg {
+  width: 50px;
+}
+
+.confirm {
+  display: none;
+  position: absolute;
+  width: 400px;
+  padding: 2rem;
+  background-color: #00bc8ddc;
+  text-align: center;
+  border-radius: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.largeFont {
+  font-size: 1.4rem;
+}
+
+.table {
+  text-align: center;
+}
+
+.tableDiv {
+  width: 1000px;
 }

@@ -48,7 +48,7 @@ const addProduct = async () => {
   const product = {
     name: nameInputElement.value,
     brand: brandInputElement.value,
-    image: imageInputElement.value,
+    imgURL: imageInputElement.value,
     description: descriptionInputElement.value,
     price: priceInputElement.value,
   };

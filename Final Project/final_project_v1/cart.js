@@ -1,27 +1,31 @@
-const loadProducts = () => {
-  const productIds = JSON.parse(localStorage.getItem("products"));
+const cart = JSON.parse(localStorage.getItem("cart"));
 
-  const products = [];
-
-  const createCardFromProduct = (product) => {
-    return `<div class='card'>
-        <img src='${product.imgURL}' />
-        <h3>${product.name}</h3>
-        <p>${product.brand}</p>
-        <p>${product.price} Lei</p>
-        <a href="details.html?product_id=${product.id}"class="btn-details">DETAILS</a>
-        <button id=${product.id} class="add-to-cart">Add to cart</button>
-     </div>`;
-  };
-
-  productIds.forEach(async (productId) => {
-    const result = await fetch(
-      `https://6325aac670c3fa390f8c6c4d.mockapi.io/products/${productId}`
-    );
-    const product = await result.json();
-    const innerHTMLProduct = createCardFromProduct(product);
-
-    document.querySelector(".products-container").innerHTML += innerHTMLProduct;
+const createTable = () => {
+  document.querySelector(".tableDiv").innerHTML = `
+	<table class="table">
+		<tr>
+			<th>Image</th>
+			<th>Name</th>
+			<th>Brand</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>Remove</th>
+		</tr>
+	</table>`;
+  const table = document.querySelector(".table");
+  cart.forEach((product) => {
+    let row = table.insertRow(1);
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    let cell3 = row.insertCell(2);
+    let cell4 = row.insertCell(3);
+    let cell5 = row.insertCell(4);
+    cell1.innerHTML = `<img class="cartImg" src=${product.imgURL}></img></a>`;
+    cell2.textContent = product.name;
+    cell3.textContent = product.brand;
+    cell4.textContent = product.price + " Lei";
+    cell5.textContent = product.items;
   });
 };
-window.addEventListener("DOMContentLoaded", loadProducts);
+
+window.addEventListener("DOMContentLoaded", createTable);

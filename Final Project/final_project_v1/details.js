@@ -16,7 +16,11 @@ const showProductDetails = async () => {
            <div class="dts">
            <h3>${productInfo.name}</h3>
                <p>${productInfo.brand}</p>
-               <p>${productInfo.price} Lei</p>
+               <p>${productInfo.price} Lei</p><br>
+               <p>Quantity:
+               <input class="cart-quantity-input" type="number" min="1" step="1">
+               </p>
+              <input type="button" class="add-to-cart" value="Add to cart"/>
           </div>
           <p class='description'></br> Description:</br> ${productInfo.description}</p>
         </div>
