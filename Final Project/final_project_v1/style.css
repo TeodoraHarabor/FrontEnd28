@@ -219,7 +219,7 @@ body {
   padding: 2rem;
   background-color: #00bc8ddc;
   text-align: center;
-  border-radius: 50px;
+  border-radius: 10px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -238,6 +238,7 @@ body {
 }
 
 .btnquantity {
-  border-radius: 5px;
+  border-radius: 4px;
   width: 20px;
+  border: solid 1px rgb(62, 60, 60);
 }

@@ -25,7 +25,7 @@ const createTable = () => {
     cell3.textContent = product.brand;
     cell4.textContent = product.price + " Lei";
     cell5.textContent = `${product.items}<input type="button">`;
-    cell5.innerHTML = `<input class="btnquantity" type="button" value="-">${product.items}<input type="button" class="btnquantity" value="+">`;
+    cell5.innerHTML = `<input class="btnquantity" type="button" value="-"> ${product.items} <input type="button" class="btnquantity" value="+">`;
   });
 };
 
