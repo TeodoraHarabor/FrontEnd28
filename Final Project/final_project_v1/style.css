@@ -237,8 +237,27 @@ body {
   width: 1000px;
 }
 
-.btnquantity {
+.minus,
+.plus {
   border-radius: 4px;
   width: 20px;
   border: solid 1px rgb(62, 60, 60);
+}
+
+.tableDiv a {
+  text-decoration: none;
+  color: black;
+}
+
+.totalPrice {
+  width: 50px;
+  height: 50px;
+}
+
+.greenText {
+  color: green;
+}
+
+.calculate {
+  margin-left: 200px;
 }

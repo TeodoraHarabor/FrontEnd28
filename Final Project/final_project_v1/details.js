@@ -9,7 +9,7 @@ const showProductDetails = async () => {
   const productURL = `https://6325aac670c3fa390f8c6c4d.mockapi.io/products/${productId}`;
   const result = await fetch(productURL);
   const productInfo = await result.json();
-
+  console.log(productId);
   const productCardDetails = `
         <div class="details">
            <img src='${productInfo.imgURL}'/> </br>
