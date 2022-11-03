@@ -195,9 +195,6 @@ body {
 .add-product-form .item .input-item input {
   width: 100%;
 }
-.hidden {
-  display: none;
-}
 
 .error {
   background-color: red;
@@ -260,4 +257,18 @@ body {
 
 .calculate {
   margin-left: 200px;
+}
+
+.edit {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
 }

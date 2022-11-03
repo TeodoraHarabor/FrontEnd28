@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <link rel="stylesheet" href="style.css" />
+
     <link
       rel="icon"
       type="image/x-icon"
@@ -19,6 +19,7 @@
       rel="stylesheet"
       href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="app">
@@ -43,6 +44,56 @@
           <div>
             <button id="add-new-product" class="btn btn-primary">
               + Adauga produs nou
+            </button>
+          </div>
+        </div>
+        <div id="edit-container" class="edit hidden">
+          <div class="edit-form">
+            <div class="item">
+              <div class="label-item">
+                <label for="image">Imagine</label>
+              </div>
+              <div class="input-item">
+                <input type="text" name="" id="image" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="label-item">
+                <label for="name">Nume</label>
+              </div>
+              <div class="input-item">
+                <input type="text" name="" id="name" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="label-item">
+                <label for="name">Brand</label>
+              </div>
+              <div class="input-item">
+                <input type="text" name="" id="brand" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="label-item">
+                <label for="description">Descriere</label>
+              </div>
+              <div class="input-item">
+                <input type="text" id="description" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="label-item">
+                <label for="price">Pret</label>
+              </div>
+              <div class="input-item">
+                <input type="text" id="price" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <button id="edit-product" class="btn btn-success">Update</button>
+            <button id="cancel-edit-product" class="btn btn-danger">
+              Cancel
             </button>
           </div>
         </div>

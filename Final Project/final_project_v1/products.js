@@ -26,6 +26,18 @@ export const postNewProduct = async (product) => {
   return response;
 };
 
+export const updateNewProduct = async (product, id) => {
+  const response = await fetch(PRODUCTS_URL + id, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(product),
+  });
+
+  return response;
+};
+
 export const deleteProductById = async (id) => {
   const response = await fetch(PRODUCTS_URL + id, {
     method: "DELETE",
