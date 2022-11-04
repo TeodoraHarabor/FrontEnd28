@@ -126,18 +126,9 @@ body {
   cursor: pointer;
 }
 
-.btn-admin {
-  justify-content: center;
-  background-color: #e59c9c;
-  text-decoration: none;
-  color: white;
-  border-radius: 3px;
-  border: none;
-  padding: 12px 30px;
-  font-size: 14px;
-  transition: 0.4s;
-}
-.btn-cart {
+.btn-admin,
+.btn-cart,
+#add-new-product {
   justify-content: center;
   background-color: #e59c9c;
   text-decoration: none;
@@ -268,7 +259,13 @@ body {
   border-radius: 5px;
   padding: 20px;
 }
-
+.cart-row-total {
+  color: red;
+}
+.removeBtn {
+  cursor: pointer;
+}
+/* utils*/
 .hidden {
   display: none;
 }

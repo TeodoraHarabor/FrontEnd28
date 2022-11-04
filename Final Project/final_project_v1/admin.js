@@ -122,7 +122,6 @@ const populateProductsTable = async () => {
     });
 };
 
-// document.querySelectorAll(".edit-btn").addEventListener("");
 window.addEventListener("DOMContentLoaded", populateProductsTable);
 
 const addProduct = async () => {

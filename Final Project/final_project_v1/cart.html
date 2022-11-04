@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -14,7 +13,9 @@
       rel="stylesheet"
       href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div id="app">
       <div class="navbar">
@@ -37,7 +38,7 @@
         <div id="price-filter"></div>
       </div>
       <div class="tableDiv">
-        <table class="table">
+        <table id="table" class="table">
           <tr>
             <th>Image</th>
             <th>Name</th>
@@ -47,6 +48,21 @@
             <th>Remove</th>
             <th>Subtotal</th>
           </tr>
+        </table>
+
+        <table class="table" id="cartItems">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Brand</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Actions</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
         </table>
       </div>
     </div>
