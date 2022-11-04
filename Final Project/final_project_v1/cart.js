@@ -36,14 +36,12 @@ function insertNewData(item) {
   let cell5 = newRow.insertCell(4);
   cell5.textContent = item.items;
   let cell6 = newRow.insertCell(5);
-  cell6.innerHTML = `
-    <input id="remove" class="minus" type="button" value="-" data-product-id=${item.id}> 
+  cell6.innerHTML = `<input id="remove" class="minus" type="button" value="-" data-product-id=${item.id}> 
     <input id="add" type="button" class="plus" value="+" data-product-id=${item.id}>
     <a class="removeBtn" data-product-id=${item.id}>Remove</a>`;
   let cell7 = newRow.insertCell(6);
-  cell7.innerHTML = `<span class="cart-row-total"> ${
-    item.items * item.price
-  } lei</span>`;
+  cell7.innerHTML = `<span class="cart-row-total"> 
+  ${item.items * item.price} lei</span>`;
 }
 
 function onRemoveItem(event) {
@@ -69,9 +67,8 @@ function onAddItem(event) {
 
   let selectedRow = event.target.parentElement.parentElement;
   selectedRow.cells[4].innerHTML = updatedProduct.items;
-  selectedRow.cells[6].innerHTML = `<span class="cart-row-total"> ${
-    updatedProduct.items * updatedProduct.price
-  } lei</span>`;
+  selectedRow.cells[6].innerHTML = `<span class="cart-row-total"> 
+  ${updatedProduct.items * updatedProduct.price} lei</span>`;
 }
 
 function onDeleteItem(event) {
@@ -144,3 +141,12 @@ function addEventsForDeleteBtn() {
     removeBtns[i].addEventListener("click", onDeleteItem);
   }
 }
+
+//confirmattion msg
+
+document.querySelector(".buyBtn").addEventListener("click", () => {
+  document.querySelector(".buyConfirmation").classList.remove("hidden");
+  setTimeout(() => {
+    document.querySelector(".buyConfirmation").classList.add("hidden");
+  }, 2000);
+});

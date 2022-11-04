@@ -221,7 +221,7 @@ body {
   text-align: center;
 }
 
-.tableDiv {
+.table {
   width: 1000px;
 }
 
@@ -232,22 +232,13 @@ body {
   border: solid 1px rgb(62, 60, 60);
 }
 
-.tableDiv a {
+.table a {
   text-decoration: none;
   color: black;
 }
 
-.totalPrice {
-  width: 50px;
-  height: 50px;
-}
-
 .greenText {
   color: green;
-}
-
-.calculate {
-  margin-left: 200px;
 }
 
 .edit {
@@ -265,7 +256,41 @@ body {
 .removeBtn {
   cursor: pointer;
 }
+.totalPrice,
+.buyBtn {
+  margin: auto;
+  width: 50%;
+
+  padding: 10px;
+}
 /* utils*/
 .hidden {
   display: none;
 }
+/* .buyConfirmation {
+  display: none;
+  position: absolute;
+  width: 200px;
+  padding: 2rem;
+  background-color: #00bc8ddc;
+  text-align: center;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+.buyConfirmation {
+  color: red;
+}
+
+/* #hide {
+  animation: hideAnimation 0s ease-in 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+} */

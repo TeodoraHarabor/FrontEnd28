@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
     <link
+      rel="icon"
+      type="image/x-icon"
+      href="./resources/favicons/favicon.ico"
+    />
+    <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
@@ -33,23 +38,12 @@
       </div>
     </div>
 
+
     <div class="container">
       <div class="side">
         <div id="price-filter"></div>
       </div>
-      <div class="tableDiv">
-        <table id="table" class="table">
-          <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Brand</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Remove</th>
-            <th>Subtotal</th>
-          </tr>
-        </table>
-
+      
         <table class="table" id="cartItems">
           <thead>
             <tr>
@@ -65,7 +59,14 @@
           <tbody></tbody>
         </table>
       </div>
+      <div class="totalPrice">Total:</div>
+      <div>
+
+      <div class="buyConfirmation hidden">Thanks for order!</div>
+      <button class="buyBtn">Buy</button>
     </div>
+    
+  </div>
     <script type="module" src="cart.js"></script>
   </body>
 </html>
