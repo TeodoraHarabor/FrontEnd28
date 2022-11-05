@@ -53,38 +53,38 @@ const populateProductsTable = async () => {
     .map(
       (product, index) =>
         `<tr>
-			<th scope="row">${index + 1}</th>
-			<td><img src="${product.imgURL}" width="50" height="50"></td>
-			<td>${product.name}</td>
-			<td>${product.brand}</td>
+      <th scope="row">${index + 1}</th>
+      <td><img src="${product.imgURL}" width="50" height="50"></td>
+      <td>${product.name}</td>
+      <td>${product.brand}</td>
       <td>${product.price} Lei</td>
-			<td>
-				<button id="${product.id}" class="btn btn-danger">
-					<i class="fa-regular fa-trash-can"></i>
-				</button>
-				<button class="btn btn-warning edit-btn">
-					<i class="fa-solid fa-pencil"></i>
-				</button>
-			</td>
-		</tr>`
+      <td>
+        <button id="${product.id}" class="btn btn-danger">
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
+        <button class="btn btn-warning edit-btn">
+          <i class="fa-solid fa-pencil"></i>
+        </button>
+      </td>
+    </tr>`
     )
     .join("");
 
   document.getElementById("products-table-body").innerHTML = tableContent;
 
-  document
-    .getElementsByClassName("edit-btn")[0]
-    .addEventListener("click", function () {
-      console.dir(this);
-      console.log(products[0]);
-      const first = products[0];
-      const name = first.name;
-      const brand = first.brand;
-      const image = first.imgURL;
-      const description = first.description;
-      const price = first.price;
+  const editBtns = document.getElementsByClassName("edit-btn");
 
-      editingId = first.id;
+  for (let i = 0; i < products.length; i++) {
+    const currentBtn = editBtns[i];
+    currentBtn.addEventListener("click", function () {
+      const wantedProduct = products[i];
+      const name = wantedProduct.name;
+      const brand = wantedProduct.brand;
+      const image = wantedProduct.imgURL;
+      const description = wantedProduct.description;
+      const price = wantedProduct.price;
+
+      editingId = wantedProduct.id;
 
       updateData({
         brand: brand,
@@ -94,10 +94,10 @@ const populateProductsTable = async () => {
         price: price,
       });
 
-      console.log({ name, brand, image, description, price });
       // const {name,brand,image,description,price}=first
-      editContainer.classList.toggle("hidden");
+      editContainer.classList.remove("hidden");
     });
+  }
 
   document
     .getElementById("edit-product")
@@ -161,3 +161,10 @@ const handleProducts = async (event) => {
 document
   .getElementById("products-list")
   .addEventListener("click", handleProducts);
+
+// mergeee!!!!!!!
+const cancelAddProduct = document.querySelector("#cancel-add-product");
+
+cancelAddProduct.addEventListener("click", () => {
+  document.querySelector(".add-product-container").classList.add("hidden");
+});

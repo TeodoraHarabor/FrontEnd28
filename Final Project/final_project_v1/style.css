@@ -202,19 +202,18 @@ body {
 
 .confirm {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 400px;
   padding: 2rem;
-  background-color: #00bc8ddc;
+  font-weight: bold;
+  color: white;
+  background-color: #e59c9c;
   text-align: center;
   border-radius: 10px;
+  font-size: 1.2rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.largeFont {
-  font-size: 1.4rem;
 }
 
 .table {
@@ -256,41 +255,47 @@ body {
 .removeBtn {
   cursor: pointer;
 }
-.totalPrice,
-.buyBtn {
-  margin: auto;
-  width: 50%;
+.totalPrice {
+  margin-left: 400px;
+}
 
-  padding: 10px;
+.buyBtn {
+  justify-content: center;
+  background-color: #e59c9c;
+  text-decoration: none;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 12px 30px;
+  font-size: 14px;
+  transition: 0.4s;
 }
 /* utils*/
+.buyConfirmation {
+  /* display: flex; */
+  position: fixed;
+  color: white;
+  font-weight: bold;
+  background-color: #e59c9c;
+  border-radius: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  font-size: 1.2em;
+  width: 400px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.edit {
+  display: flex;
+  position: fixed;
+  background-color: white;
+  margin: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
 .hidden {
   display: none;
 }
-/* .buyConfirmation {
-  display: none;
-  position: absolute;
-  width: 200px;
-  padding: 2rem;
-  background-color: #00bc8ddc;
-  text-align: center;
-  border-radius: 10px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-.buyConfirmation {
-  color: red;
-}
-
-/* #hide {
-  animation: hideAnimation 0s ease-in 3s;
-  animation-fill-mode: forwards;
-}
-@keyframes hideAnimation {
-  to {
-    visibility: hidden;
-    width: 0;
-    height: 0;
-  }
-} */

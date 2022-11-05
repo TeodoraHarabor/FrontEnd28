@@ -25,15 +25,14 @@
     <div id="app">
       <div class="navbar">
         <div class="logo">
-          <a class="btn btn-lg" href="index.html">TALCIOC</a>
+          <a class="btn btn-lg" href="index.html">TASMINE</a>
         </div>
         <div class="menu">
           <a class="btn btn-admin" href="admin.html"
             >Admin <i class="fa-solid fa-user"></i
           ></a>
           <a class="btn btn-cart" href="cart.html">
-            Cart <i class="fa-solid fa-cart-shopping"></i
-          ></a>
+            Cart <i class="fa-solid fa-cart-shopping"></i></a>
         </div>
       </div>
     </div>
@@ -59,13 +58,15 @@
           <tbody></tbody>
         </table>
       </div>
-      <div class="totalPrice">Total:</div>
+      <div class="totalPrice">
+        <span>Total: </span> <span id="cartTotal"></span>
+      
       <div>
-
-      <div class="buyConfirmation hidden">Thanks for order!</div>
-      <button class="buyBtn">Buy</button>
+      <button class="btn buyBtn">
+        <i class="fa-solid fa-cart-shopping"> Buy</i></button>
+      </div>
     </div>
-    
+    <div class="buyConfirmation hidden">Thank you for order!</div>
   </div>
     <script type="module" src="cart.js"></script>
   </body>
