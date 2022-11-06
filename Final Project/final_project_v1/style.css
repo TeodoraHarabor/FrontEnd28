@@ -8,7 +8,12 @@ body {
   font-family: "Raleway", sans-serif;
 }
 .btn-lg {
+  font-size: 22px;
   text-decoration: none;
+  font-weight: bold;
+}
+.homePage {
+  font-size: 16px;
 }
 .card {
   border-radius: 5px;
@@ -146,13 +151,16 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 100px;
 }
-
+#products-list {
+  margin: auto;
+  width: 80%;
+}
 .add-product-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-top: 40px;
-  border: 2px solid lightblue;
+  border: 2px solid #e59c9c;
   border-radius: 5px;
   padding: 20px;
 }
@@ -170,6 +178,11 @@ body {
 }
 
 .add-product-form .item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.edit-form .item {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -195,7 +208,7 @@ body {
   background-color: green;
 }
 
-/*cart*/
+/*cart page*/
 .cartImg {
   width: 50px;
 }
@@ -240,15 +253,6 @@ body {
   color: green;
 }
 
-.edit {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 40px;
-  border: 2px solid lightblue;
-  border-radius: 5px;
-  padding: 20px;
-}
 .cart-row-total {
   color: red;
 }
@@ -256,7 +260,7 @@ body {
   cursor: pointer;
 }
 .totalPrice {
-  margin-left: 400px;
+  margin-left: 300px;
 }
 
 .buyBtn {
@@ -287,15 +291,64 @@ body {
   text-align: center;
 }
 
+/*admin page*/
+.add-product-message,
+.edit-product-message {
+  position: fixed;
+  color: white;
+  font-weight: bold;
+  background-color: #e59c9c;
+  border-radius: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  font-size: 1.2em;
+  width: 400px;
+  padding: 2rem;
+  text-align: center;
+}
 .edit {
   display: flex;
   position: fixed;
+  flex-direction: column;
   background-color: white;
+  border: 2px solid #e59c9c;
+  border-radius: 5px;
+  gap: 20px;
   margin: 0;
+  padding: 20px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 50%;
 }
+#edit-container {
+  width: 550px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-form .item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-form .item .label-item {
+  flex: 1;
+}
+
+.edit-form .item .input-item {
+  flex: 3;
+}
+
+.edit-form .item .input-item input {
+  width: 100%;
+}
+
 .hidden {
   display: none;
 }

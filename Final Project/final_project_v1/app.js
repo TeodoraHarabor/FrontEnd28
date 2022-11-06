@@ -151,7 +151,9 @@ const addProductToCart = () => {
   }
   if (cart.length > 0) {
     localStorage.setItem("cart", JSON.stringify(cart));
+
     // Confirmation message
+
     document.querySelector(".confirm").style.display = "block";
     setTimeout(() => {
       document.querySelector(".confirm").style.display = "none";

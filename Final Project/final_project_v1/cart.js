@@ -21,7 +21,7 @@ function createTheTable() {
   }
 }
 
-function insertNewData(item) {
+export function insertNewData(item) {
   var table = document
     .getElementById("cartItems")
     .getElementsByTagName("tbody")[0];
@@ -149,7 +149,7 @@ function calculateTotal(items) {
 
   if (cartItems.length) {
     items.forEach((item) => {
-      total = total + item.items * item.price;
+      total += item.items * item.price;
     });
   }
 

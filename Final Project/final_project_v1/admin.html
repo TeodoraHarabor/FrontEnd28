@@ -37,14 +37,13 @@
           ></a>
         </div>
       </div>
-      <div class="container">Home page</div>
 
       <div class="admin-container">
         <div class="header">
-          <h4>Gestionare produse</h4>
+          <h4>Products management</h4>
           <div>
             <button id="add-new-product" class="btn btn-primary">
-              + Adauga produs nou
+              + Add new product
             </button>
           </div>
         </div>
@@ -52,7 +51,7 @@
           <div class="edit-form">
             <div class="item">
               <div class="label-item">
-                <label for="image">Imagine</label>
+                <label for="image">Image:</label>
               </div>
               <div class="input-item">
                 <input type="text" name="" id="image" />
@@ -60,7 +59,7 @@
             </div>
             <div class="item">
               <div class="label-item">
-                <label for="name">Nume</label>
+                <label for="name">Name:</label>
               </div>
               <div class="input-item">
                 <input type="text" name="" id="name" />
@@ -68,7 +67,7 @@
             </div>
             <div class="item">
               <div class="label-item">
-                <label for="name">Brand</label>
+                <label for="name">Brand:</label>
               </div>
               <div class="input-item">
                 <input type="text" name="" id="brand" />
@@ -76,7 +75,7 @@
             </div>
             <div class="item">
               <div class="label-item">
-                <label for="description">Descriere</label>
+                <label for="description">Description:</label>
               </div>
               <div class="input-item">
                 <input type="text" id="description" />
@@ -84,7 +83,15 @@
             </div>
             <div class="item">
               <div class="label-item">
-                <label for="price">Pret</label>
+                <label for="stock">Stock:</label>
+              </div>
+              <div class="input-item">
+                <input type="text" id="stock" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="label-item">
+                <label for="price">Price:</label>
               </div>
               <div class="input-item">
                 <input type="text" id="price" />
@@ -92,18 +99,26 @@
             </div>
           </div>
           <div>
-            <button id="edit-product" class="btn btn-success">Update</button>
+            <button id="update-edit-product" class="btn btn-success">
+              Update
+            </button>
             <button id="cancel-edit-product" class="btn btn-danger">
               Cancel
             </button>
           </div>
         </div>
-        <div class="add-product-message"></div>
+        <div class="add-product-message hidden">
+          The product has been succesfully added!
+        </div>
+        <div class="edit-product-message hidden">
+          The product has been updated!
+        </div>
+
         <div class="add-product-container hidden">
           <div class="add-product-header">
             <h4>Adaugare produs nou</h4>
             <div>
-              <button id="add-product" class="btn btn-success">Adauga</button>
+              <button id="add-product" class="btn btn-success">Add</button>
               <button id="cancel-add-product" class="btn btn-danger">
                 Cancel
               </button>
@@ -112,7 +127,7 @@
           <div class="add-product-form">
             <div class="item">
               <div class="label-item">
-                <label for="image">Imagine</label>
+                <label for="image">Image:</label>
               </div>
               <div class="input-item">
                 <input type="text" name="" id="image" />
@@ -120,7 +135,7 @@
             </div>
             <div class="item">
               <div class="label-item">
-                <label for="name">Nume</label>
+                <label for="name">Name:</label>
               </div>
               <div class="input-item">
                 <input type="text" name="" id="name" />
@@ -128,7 +143,7 @@
             </div>
             <div class="item">
               <div class="label-item">
-                <label for="name">Brand</label>
+                <label for="name">Brand:</label>
               </div>
               <div class="input-item">
                 <input type="text" name="" id="brand" />
@@ -136,7 +151,7 @@
             </div>
             <div class="item">
               <div class="label-item">
-                <label for="description">Descriere</label>
+                <label for="description">Description:</label>
               </div>
               <div class="input-item">
                 <input type="text" id="description" />
@@ -144,7 +159,15 @@
             </div>
             <div class="item">
               <div class="label-item">
-                <label for="price">Pret</label>
+                <label for="stock">Stock:</label>
+              </div>
+              <div class="input-item">
+                <input type="text" id="stock" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="label-item">
+                <label for="price">Price:</label>
               </div>
               <div class="input-item">
                 <input type="text" id="price" />
@@ -160,6 +183,7 @@
                 <th scope="col">Image</th>
                 <th scope="col">Name</th>
                 <th scope="col">Brand</th>
+                <th scope="col">Stock</th>
                 <th scope="col">Price</th>
                 <th scope="col"></th>
               </tr>
