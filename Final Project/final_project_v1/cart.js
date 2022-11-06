@@ -43,7 +43,7 @@ export function insertNewData(item) {
     <a class="removeBtn" data-product-id=${item.id}>Remove</a>`;
   let cell7 = newRow.insertCell(6);
   cell7.innerHTML = `<span class="cart-row-total"> 
-  ${item.items * item.price} lei</span>`;
+  ${item.items * item.price} Lei</span>`;
 }
 
 function onRemoveItem(event) {
@@ -153,7 +153,7 @@ function calculateTotal(items) {
     });
   }
 
-  document.getElementById("cartTotal").innerHTML = total + " lei";
+  document.getElementById("cartTotal").innerHTML = total + " Lei";
 
   return total;
 }

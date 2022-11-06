@@ -106,7 +106,7 @@ const populateProductsTable = async () => {
         price: price,
       });
 
-      // const {name,brand,image,description,price}=first
+      // const {name,brand,image,description,price} = first
       editContainer.classList.remove("hidden");
     });
   }
