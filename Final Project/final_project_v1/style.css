@@ -65,7 +65,7 @@ body {
 .details {
   border: 2px solid #e59c9c;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
   width: 50%;
   box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -315,7 +315,8 @@ body {
 
 /*admin page*/
 .add-product-message,
-.edit-product-message {
+.edit-product-message,
+.details-message {
   position: fixed;
   color: white;
   font-weight: bold;
