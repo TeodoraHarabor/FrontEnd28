@@ -17,9 +17,6 @@ const showProductDetails = async () => {
                <p>${productInfo.brand}</p>
                <p>${productInfo.price} Lei</p><br>
                <p>Stock: ${productInfo.stock}</p>
-               <p>Quantity:
-               <input class="cart-quantity-input" type="number" min="1" step="1">
-               </p>
               <input type="button" class="add-to-cart" value="Add to cart"/>
           </div>
           <p class='description'></br> Description:</br> ${productInfo.description}</p>
@@ -27,6 +24,36 @@ const showProductDetails = async () => {
      `;
 
   document.querySelector(".product-details").innerHTML = productCardDetails;
+};
+
+let prodResult;
+let productId;
+document.querySelector(".product-details").addEventListener("click", (e) => {
+  if (e.target.classList.contains("add-to-cart")) {
+    productId = e.target.id;
+    addProductToCart();
+  }
+});
+
+const addProductToCart = () => {
+  let myProduct = prodResult.find((product) => product.id == productId);
+  console.log(myProduct);
+  let cart = [];
+  if (localStorage.getItem("cart") === null) {
+    cart.push({ ...myProduct, items: 1 });
+  } else {
+    cart = JSON.parse(localStorage.getItem("cart"));
+    const productInCart = cart.find((product) => product.id == productId);
+    if (productInCart != undefined) {
+      productInCart.items += 1;
+    } else {
+      const productToBeAddedInCart = { ...myProduct, items: 1 };
+      cart.push(productToBeAddedInCart);
+    }
+  }
+  if (cart.length > 0) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
 };
 
 window.addEventListener("DOMContentLoaded", showProductDetails);
