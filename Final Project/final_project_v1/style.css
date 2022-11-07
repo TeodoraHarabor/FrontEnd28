@@ -7,6 +7,7 @@
 body {
   font-family: "Raleway", sans-serif;
 }
+/*--------------------------------MAIN PAGE-------------------------------*/
 .btn-lg {
   font-size: 22px;
   text-decoration: none;
@@ -49,19 +50,76 @@ body {
   flex: 5;
 }
 
-.container {
-  display: flex;
-}
-
 .side {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  height: 220px;
+  border-radius: 5px;
   margin-left: 30px;
+  gap: 10px;
+  font-size: 16px;
+  transition: opacity 0.4s ease;
+  box-shadow: 2px 2px 2px 2px #e59c9c;
+  margin-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+}
+#price-filter {
+  flex-direction: column;
+  display: flex;
+  gap: 2px;
 }
 .price-checkbox {
   cursor: pointer;
 }
+/*-------------------MAIN PAGE SLIDER ---------------------*/
 
-/*DETAILS*/
+.container-slider {
+  width: 70vmin;
+  position: relative;
+  transform: translate(-50%, -50%);
+  margin-top: 34px;
+  left: 50%;
+  overflow: hidden;
+}
+.wrapper {
+  margin-top: 305px;
+  width: 100%;
+  display: flex;
+  animation: slide 16s infinite;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+img {
+  width: 100%;
+}
+
+/*-----------------------------DETAILS PAGE---------------------------*/
 .details {
   border: 2px solid #e59c9c;
   margin: auto;
@@ -119,13 +177,6 @@ body {
   color: white;
 }
 
-/*INTRO */
-.intro {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -157,71 +208,11 @@ body {
   font-size: 14px;
   transition: 0.4s;
 }
-
-/*admin page*/
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 100px;
-}
-#products-list {
+/*------------------------------CART PAGE---------------------*/
+.container-cart {
   margin: auto;
-  width: 80%;
+  width: 70%;
 }
-.add-product-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 40px;
-  border: 2px solid #e59c9c;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-.admin-container .header,
-.admin-container .add-product-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.add-product-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.add-product-form .item {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.edit-form .item {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.add-product-form .item .label-item {
-  flex: 1;
-}
-
-.add-product-form .item .input-item {
-  flex: 2;
-}
-
-.add-product-form .item .input-item input {
-  width: 100%;
-}
-
-.error {
-  background-color: red;
-}
-
-.success {
-  background-color: green;
-}
-
-/*cart page*/
 .cartImg {
   width: 50px;
 }
@@ -296,24 +287,63 @@ body {
   font-size: 14px;
   transition: 0.4s;
 }
-/* utils*/
-.buyConfirmation {
-  /* display: flex; */
-  position: fixed;
-  color: white;
-  font-weight: bold;
-  background-color: #e59c9c;
-  border-radius: 10px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  font-size: 1.2em;
-  width: 400px;
-  padding: 2rem;
-  text-align: center;
+/*------------ADMIN PAGE--------------*/
+.container {
+  margin-top: -270px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
+}
+#products-list {
+  margin: auto;
+  width: 80%;
+}
+.add-product-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+  border: 2px solid #e59c9c;
+  border-radius: 5px;
+  padding: 20px;
 }
 
-/*admin page*/
+.admin-container .header,
+.admin-container .add-product-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-product-form .item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.edit-form .item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-product-form .item .label-item {
+  flex: 1;
+}
+
+.add-product-form .item .input-item {
+  flex: 2;
+}
+
+.add-product-form .item .input-item input {
+  width: 100%;
+}
+
+/*------------ADMIN PAGE--------------*/
 .add-product-message,
 .edit-product-message,
 .details-message {
@@ -371,7 +401,22 @@ body {
 .edit-form .item .input-item input {
   width: 100%;
 }
-
+/* UTILS*/
+.buyConfirmation {
+  /* display: flex; */
+  position: fixed;
+  color: white;
+  font-weight: bold;
+  background-color: #e59c9c;
+  border-radius: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  font-size: 1.2em;
+  width: 400px;
+  padding: 2rem;
+  text-align: center;
+}
 .hidden {
   display: none;
 }
