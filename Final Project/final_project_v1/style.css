@@ -10,6 +10,8 @@ body {
 /*--------------------------------MAIN PAGE-------------------------------*/
 .btn-lg {
   font-size: 22px;
+  color: #551a8b;
+
   text-decoration: none;
   font-weight: bold;
 }
