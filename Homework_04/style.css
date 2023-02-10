@@ -1,8 +1,6 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Roboto:wght@300&display=swap");
 * {
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
 
@@ -25,6 +23,7 @@ textarea {
 input[type="submit"] {
   background-color: #c83859;
   color: white;
+  font-weight: bold;
   padding: 12px 20px;
   border: none;
   cursor: pointer;
@@ -54,7 +53,8 @@ input[type="submit"]:hover {
 }
 
 .right img {
-  width: 600px;
+  width: 560px;
+  margin-right: 9px;
   height: 430px;
   border: 4px solid #c83859;
   border-radius: 5px;
@@ -71,6 +71,33 @@ input[type="submit"]:hover {
   text-align: center;
   margin: 30px 950px;
   color: white;
-  background-color: #32cd32;
+  font-weight: bold;
+  background-color: #6ad56a;
   border-radius: 4px;
+  margin: auto;
+  width: 50%;
+  margin-top: 10px;
+}
+
+/*Responsive - Media Query*/
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  .right img {
+    width: 540px;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .right img {
+    width: 335px;
+  }
+}
+
+/* Smartphone */
+@media only screen and (max-width: 767px) {
+  .right img {
+    width: 160px;
+  }
 }

@@ -4,7 +4,7 @@ var radio1 = document.querySelector("#radio1");
 var radio2 = document.querySelector("#radio2");
 var subject = document.querySelector("#subject");
 var submit = document.querySelector("#submit");
-var ok = document.querySelector("#ok");
+var message = document.querySelector("#message");
 
 submit.addEventListener("click", function checkForBlank() {
   //if it is ok
@@ -23,10 +23,10 @@ submit.addEventListener("click", function checkForBlank() {
     }
     console.log("Mesaj: " + subject.value);
 
-    ok.classList.add("green");
-    ok.innerText =
+    message.classList.add("green");
+    message.innerText =
       "The information has been sent. Thank you, " + fname.value + "!";
-    setTimeout(() => ok.remove(), 5000);
+    setTimeout(() => message.remove(), 5000);
 
     //if it is not ok
   } else {
